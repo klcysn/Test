@@ -1,0 +1,17 @@
+<template>
+    <lightning-card class="card">
+    <div class="slds-grid slds-m-bottom_medium">
+        <lightning-input class="slds-col slds-size_1-of-3" type="text" onchange={handleChange} value={name}></lightning-input>
+    </div>
+    <div>
+        {name}
+    </div>
+</lightning-card>
+<template lwc:if={name}>
+ <lightning-modal-header label="My Modal Heading"></lightning-modal-header>
+    <lightning-modal-body> Content: {content} </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="OK" onclick={handleOkay}></lightning-button>
+    </lightning-modal-footer>
+</template>
+</template>
